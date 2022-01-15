@@ -4,7 +4,7 @@ function userBookController() {
     return {
         getAllBook: async (req, res) => {
             const books = await Book.find({ deleted: false }).sort({ createdAt: -1 }).exec()
-            res.json(books)
+            res.status(200).json(books)
         }
     }
 }

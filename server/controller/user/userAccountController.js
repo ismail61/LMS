@@ -1,26 +1,29 @@
 const User = require('../../model/user'),
     bcrypt = require('bcrypt'),
-    passwordValidator = require('../../validators/passwordValidator')
+    passwordValidator = require('../../validators/passwordValidator'),
+    error = require('../../error/error')
 function accountController() {
     return {
         getUserInformation: async (req, res) => {
             const data = await User.findOne({ _id: req.user._id }).select("-password").select("-token");
-            res.json(data)
+            res.status(200).json(data)
         },
         updateUserInformation: async (req, res) => {
             const data = await User.findOneAndUpdate({ _id: req.user._id }, req.body, { new: true })
-            res.json(data)
+            if(!data) return error().resourceError(res, "Updated Failed", 409);
+            res.status(200).json(data)
         },
         changePassword: async (req, res) => {
             const { password, newPassword } = req.body
             const validator = await passwordValidator(newPassword)
-            if (!validator.isValid) res.json({ err: validator.error.password })
+            if (!validator.isValid) return error().resourceError(res, validator.error?.password, 422)
             const user = await User.findOne({ _id: req.user._id })
             const passwordMatch = await bcrypt.compare(password, user.password)
-            if (!passwordMatch) return error().resourceError(res, 'Invalid Password')
+            if (!passwordMatch) return error().resourceError(res, 'Invalid Password',401)
             const hashPassword = await bcrypt.hash(newPassword, 10)
             const data = await User.findOneAndUpdate({ _id: req.user._id }, { password: hashPassword }, { new: true })
-            res.json(data)
+            if(!data) return error().resourceError(res, "Updated Failed", 409);
+            res.status(200).json(data)
         }
     }
 }

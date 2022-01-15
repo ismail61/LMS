@@ -16,7 +16,8 @@ function adminRoutes(app) {
     app.get('/admin/books', adminAuth, tryCatch(adminBookController().getAllBook))
     app.get('/admin/deleted-books', adminAuth, tryCatch(adminBookController().getAllDeletedBook))
     app.get('/admin/books/:id', adminAuth, tryCatch(adminBookController().getSingleBook))
-    app.patch('/admin/books/delete/:id', adminAuth, tryCatch(adminBookController().deleteBook))
+    app.patch('/admin/books/delete/:id', adminAuth, tryCatch(adminBookController().temporaryDeleteBook))
+    app.delete('/admin/books/delete/:id', adminAuth, tryCatch(adminBookController().permanentDeleteBook))
     app.patch('/admin/books/restore/:id', adminAuth, tryCatch(adminBookController().restoreBook))
     //admin order
     app.get('/admin/orders', adminAuth, tryCatch(adminOrderController().getAllOrder))

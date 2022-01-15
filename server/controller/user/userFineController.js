@@ -5,7 +5,8 @@ function fineController() {
     return {
         addFineAUser: async (req, res) => {
             const data = await Order.findOneAndUpdate({ _id: req.body?._id, status: { $nin: ['rejected', 'pending', 'returned'] } }, { fine: req.body.fine }, { new: true })
-            res.json(data)
+            if(!data) return error().resourceError(res, "Failed!", 409);
+            res.status(200).json(data)
         },
         findTotalFineAUser: async (req, res) => {
             const filter = { userId: ObjectId(req.user._id), paid: false };
@@ -19,7 +20,7 @@ function fineController() {
                     }
                 }
             ])
-            res.json(data[0]?.total)
+            res.status(200).json(data[0]?.total)
         }
     }
 }

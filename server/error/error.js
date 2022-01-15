@@ -1,12 +1,12 @@
 module.exports = ()=>{
     return {
         serverError : (res)=>{
-            res.json({
+            res.status(500).json({
                 err: "Server Error"
             })
         },
-        resourceError : (res,msg)=>{
-            res.json({
+        resourceError : (res,msg,statusCode)=>{
+            res.status(statusCode).json({
                 err: msg
             })
         }

@@ -37,6 +37,10 @@ const bookSchema = new Schema({
     deleted : {
         type : Boolean,
         default : false
+    },
+    ordered : {
+        type : Boolean,
+        default : false
     }
 }/* , {
     timestamps: true
