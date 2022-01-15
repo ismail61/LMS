@@ -4,10 +4,10 @@ Folder Format
 
 📦client
 
-📦server
- ┣ 📂auth
- ┃ ┣ 📜adminAuthenticate.js
- ┃ ┣ 📜pathAuthenticate.js
+📦server<br />
+ ┣ 📂auth<br />
+ ┃ ┣ 📜adminAuthenticate.js<br />
+ ┃ ┣ 📜pathAuthenticate.js<br />
  ┃ ┗ 📜userAuthenticate.js
  ┣ 📂config
  ┃ ┗ 📂preventHackingMiddleware
