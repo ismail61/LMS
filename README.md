@@ -60,3 +60,4 @@ Folder Format
  ┃ ┣ 📜loginValidator.js
  ┃ ┣ 📜passwordValidator.js
  ┃ ┗ 📜registerValidator.js
+ 
