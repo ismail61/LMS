@@ -1,13 +1,12 @@
 # LMS
 Library Management System
-Folder Format
 
 📦client
 
-📦server<br />
- ┣ 📂auth<br />
- ┃ ┣ 📜adminAuthenticate.js<br />
- ┃ ┣ 📜pathAuthenticate.js<br />
+📦server
+ ┣ 📂auth
+ ┃ ┣ 📜adminAuthenticate.js
+ ┃ ┣ 📜pathAuthenticate.js
  ┃ ┗ 📜userAuthenticate.js
  ┣ 📂config
  ┃ ┗ 📂preventHackingMiddleware
@@ -60,4 +59,3 @@ Folder Format
  ┃ ┣ 📜loginValidator.js
  ┃ ┣ 📜passwordValidator.js
  ┃ ┗ 📜registerValidator.js
- 
