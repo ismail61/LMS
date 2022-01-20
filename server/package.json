@@ -1,0 +1,61 @@
+{
+  "name": "LibraryManagementSystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
+  "scripts": {
+   "test": "jest",
+    "start": "nodemon api/server.js"
+  },
+  "keywords": [],
+  "author": "Ismail Hosen",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.2.1"
+  },
+  "jest": {
+    "automock": false,
+    "testRegex": "\\.test\\.js$",
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.28.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^6.0.5",
+    "express-session": "^1.17.2",
+    "google-auth-library": "^7.11.0",
+    "helmet": "^5.0.1",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^5.12.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "node-fetch": "^3.1.0",
+    "nodemailer": "^6.7.2",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^4.4.0",
+    "uuid": "^8.3.2",
+    "validator": "^13.5.2",
+    "xss-clean": "^0.1.1"
+  }
+}
