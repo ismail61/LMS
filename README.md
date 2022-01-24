@@ -111,7 +111,8 @@ Library Management System
  ┃ ┃ ┗ 📜cloudinary.js<br />
  ┃ ┗ 📂database<br />
  ┃ ┃ ┗ 📜database.js<br />
-  ┣ 📂socket<br />
+ ┃ ┃ ┣ config.js
+ ┣ 📂socket<br />
  ┃ ┗ 📜socketIO.js<br />
  ┣ 📜package.json<br />
  ┣ 📜server.js
