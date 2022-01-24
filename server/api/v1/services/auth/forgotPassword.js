@@ -1,10 +1,9 @@
-const  emailValidator = require('../../validations/email.validator'),
+const emailValidator = require('../../validations/email.validator'),
     error = require('../../utils/error/error'),
     crypto = require('crypto'),
     { mailSend } = require('../../utils/emailTransport'),
     User = require('../../models/user')
 module.exports = async (req, res) => {
-    //const { email, role } = req.query
     const TEN_MINUTES = 10 * 60 * 1000,
         { email, role } = req.body,
         url = req.get('origin'),
@@ -21,6 +20,9 @@ module.exports = async (req, res) => {
 
     const response = await mailSend(email, urlWithToken)
     if (!response) return error().resourceError(res, "Email Send Failed", 409);
+    setTimeout(async () => {
+        await User.findOneAndUpdate({ _id: user._id }, { resetPasswordToken: null, resetPasswordTokenDate: null }, { new: true }).exec()
+    }, TEN_MINUTES)
     res.status(200).json(response)
     //res.json(`http://localhost:3000/reset-password?token=${resetPasswordToken}`)
 }

@@ -1,6 +1,7 @@
 const generateToken = require('../../utils/generateToken'),
     { OAuth2Client } = require('google-auth-library'),
-    client = new OAuth2Client(process.env.BACKEND_GOOGLE_CLIENT_ID),
+    { google } = require('../../../../config/config'),
+    client = new OAuth2Client(google.client_id),
     error = require('../../utils/error/error'),
     crypto = require('crypto'),
     bcrypt = require('bcrypt'),
@@ -8,7 +9,7 @@ const generateToken = require('../../utils/generateToken'),
     User = require('../../models/user')
 module.exports = async (req, res) => {
     const { tokenId, role } = req.body
-    const response = await client.verifyIdToken({ idToken: tokenId, audience: process.env.BACKEND_GOOGLE_CLIENT_ID }),
+    const response = await client.verifyIdToken({ idToken: tokenId, audience: google.client_id }),
         { email_verified, name, email } = response.payload
     if (!email_verified || !role) return error().resourceError(res, 'Email Verification Failed', 401)
     const user = await User.findOne({ email, role })
