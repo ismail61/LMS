@@ -1,0 +1,30 @@
+.title {
+  font-size: 19px;
+  font-weight: 600;
+  padding: 0 30px;
+  border-bottom: 2px solid rgb(17, 87, 3);
+}
+.fa-arrow-right{
+  color: black;
+}
+.card-footer{
+  font-size: 19px;
+}
+.card-footer-link:hover{
+  color: brown !important;
+}
+.fa-arrow-right:hover{
+  color: brown !important;
+}
+.bg-text {
+  margin-top: 5px;
+  opacity: 0.5;
+  font-size: 70px;
+  margin: 0;
+  transition: all 2s;
+  display: inline-block;
+}
+.bg-text:hover {
+  opacity: 0.8;
+  transform: scale(1.1,1.5);
+}

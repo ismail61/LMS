@@ -1,0 +1,10 @@
+.modal .col-md-9{
+    padding-top: 2vh;
+}
+.modal .order-details{
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+}
+.modal .return-details{
+    margin-top: 30px !important;
+}

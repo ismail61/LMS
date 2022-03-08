@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+}
+#sidenav {
+  position: fixed;
+  min-width: 240px;
+  height: 100%;
+  background-color: #35495d;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+#main-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  bottom: 0px;
+  overflow: scroll;
+}
+#main-nav li {
+  padding: 0;
+  margin: 0;
+}
+#main-nav li > a {
+  display: block;
+  padding: 0 0 0 70px;
+  text-decoration: none;
+  color: #c7c8c9;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 65px;
+  font-size: 18px;
+}
+#main-nav li a:hover {
+  color: white;
+}
+.active {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  box-shadow: inset 5px 0 0 #ef8700;
+}
+#main-nav li a .fa-angle-down {
+  padding-left: 50px;
+}
+#main-nav .collapse-books {
+  background-color: #1b252e;
+}
+#main-nav .collapse-books li a {
+  font-size: 15px;
+  padding: 0 0 0 50px;
+}
+#main-nav .collapse-books li .small-icon {
+  margin-top: 4px;
+  font-size: 20px;
+  position: absolute;
+  width: 40px;
+  height: 55px;
+  line-height: 55px;
+  padding: 0%;
+  text-align: center;
+  left: 6px;
+}
+#main-nav .collapse-books li span {
+  padding-left: -69px;
+}
+#main-nav li a .icon {
+  font-size: 30px;
+  position: absolute;
+  width: 60px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  left: 10px;
+}
+#main-nav li a .fa , #main-nav li a .fas,#main-nav li a .fab {
+  color: #98cde6;
+}
+
+@media all and (max-width: 900px) {
+  #sidenav {
+    position: fixed;
+    min-width: 208px;
+    height: 100%;
+    background-color: #35495d;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  #main-nav li a .icon {
+    font-size: 24px;
+  }
+  #main-nav .collapse-books li a {
+    font-size: 13px;
+  }
+  #main-nav li > a {
+    padding: 0 15px 0 68px;
+    font-size: 17px;
+  }
+  #main-nav li a .fa-angle-down {
+    padding-left: 15px;
+  }
+}
+@media all and (max-width: 767px) {
+  #sidenav {
+    left: -300px;
+  }
+}
