@@ -1,0 +1,511 @@
+body {
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #96a2a8;
+  background-repeat: no-repeat;
+}
+
+/* Navbar Start */
+.navbar {
+  padding: 0 10px;
+}
+
+.navbar .navbar-brand {
+  font-size: 23px;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar .admin {
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  color: crimson;
+}
+
+.navbar .dropdown-item {
+  color: black;
+}
+
+.navbar .auth {
+  display: flex;
+}
+.navbar .admin-auth {
+  display: block;
+  font-size: 22px;
+}
+.navbar .auth .nav-item {
+  font-size: 22px;
+  margin-right: 6px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.navbar .collapse .book-or-home {
+  display: flex;
+  font-size: 20px;
+}
+.navbar-brand-small {
+  display: none;
+}
+.bars-icon {
+  display: none;
+}
+
+/* Navbar End */
+
+/* Hero Image Start */
+
+.hero img {
+  height: 90vh !important;
+  width: 100% !important;
+}
+
+/* Hero Image End */
+.stay-with {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.image {
+  width: 380px;
+  height: 380px;
+}
+
+.border-line {
+  border-right: 1px solid #fffefe;
+}
+
+/* Social Media */
+.facebook {
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.linkedin {
+  background-color: #2867b2;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.line {
+  height: 1px;
+  width: 45%;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.or {
+  width: 8%;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.text-sm {
+  font-size: 15px !important;
+  margin-left: -10px;
+}
+
+::placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+::-ms-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  padding: 10px 12px 10px 12px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #6c7783;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #304ffe;
+  outline-width: 0;
+}
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-custom {
+  background-color: rgb(95, 5, 5);
+  width: 150px;
+  color: #fff;
+  border-radius: 24px;
+  padding: 10px 5px;
+}
+
+.btn-custom:hover {
+  background-color: rgb(90, 35, 35);
+  color: #fff;
+  cursor: pointer;
+}
+
+.bg-blue {
+  color: #fff;
+  background-color: #1a237e;
+}
+
+.nav-pills {
+  display: table !important;
+  width: 100%;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+  border-bottom: 1px solid #0d6efd40;
+}
+
+.nav-pills .nav-item {
+  display: table-cell;
+  background: #0d6efd2e;
+}
+
+/* add Book section */
+
+.all-books {
+  font-size: 19px !important;
+}
+
+.all-books a {
+  color: rgb(95, 5, 5);
+}
+
+.all-books a:hover {
+  color: rgb(90, 35, 35);
+}
+
+/* Show All Books Using card  */
+.card {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: rgb(218, 214, 214);
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-card {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  display: block;
+  overflow: hidden;
+}
+
+.img-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.25s ease;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-title {
+  margin-top: 0px;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+
+.card .footer {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.card .footer .edit {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.card .footer .delete {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Orders Show */
+.cell {
+  background: rgb(236, 226, 226);
+  border-bottom: solid black;
+}
+.cell td:not(:nth-child(4)) {
+  cursor: pointer;
+}
+
+thead {
+  background: #dddcdc;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table tbody tr:nth-child(even) {
+  background: rgb(211, 205, 205);
+}
+
+/* Profile */
+.myprofile {
+  height: 540px;
+  width: 450px;
+  background: #c4c1c1;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
+.header-color {
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 150px;
+  width: 450px;
+  background: #353fad;
+}
+
+.profile-pic img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 10px solid #6c808a;
+  margin-top: -100px;
+}
+
+.myprofile .name {
+  font-size: 25px;
+  font-weight: 700;
+  color: #131b23;
+  margin-bottom: 10px;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.myprofile .email {
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  color: #131b23;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 20px;
+  color: #131b23;
+  letter-spacing: 0.01em;
+}
+
+.description p:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 991px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .logo {
+    margin-left: 0px;
+  }
+
+  .image {
+    width: 300px;
+    height: 220px;
+  }
+
+  .border-line {
+    border-right: none;
+  }
+
+  .navbar .auth {
+    display: inline;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar .auth .nav-item {
+    font-size: 22px;
+    padding: 5px 15px;
+  }
+  .navbar .collapse .book-or-home {
+    display: inline;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+  }
+
+  .table tr {
+    margin-bottom: 10px;
+  }
+
+  .table td {
+    text-align: right;
+    position: relative;
+    padding-right: 3%;
+  }
+
+  .table td::before {
+    content: attr(data);
+    position: absolute;
+    left: 0;
+    padding-left: 3%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar .system {
+    display: none;
+  }
+
+  .myprofile {
+    height: 560px;
+    width: 400px;
+  }
+
+  .header-color {
+    width: 400px;
+  }
+
+  .myprofile .name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .myprofile .email {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .myprofile .description {
+    font-size: 16px;
+  }
+
+  .myprofile .profile-pic img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .admin-content {
+    margin-left: -28px;
+    margin-right: 3px;
+  }
+  .common-content {
+    margin-left: -28px;
+    margin-right: 3px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .admin-content {
+    margin-left: -80px;
+    margin-right: 10px;
+  }
+  .common-content {
+    margin-left: -80px;
+    margin-right: 10px;
+  }
+}
+@media all and (max-width: 767px) {
+  .navbar-brand-lg {
+    display: none;
+  }
+  .navbar-brand-small {
+    display: block;
+  }
+  .bars-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
